@@ -14,6 +14,20 @@ function Header(props) {
         setToggle(!toggle);
     };
 
+    const onButtonClick = () => {
+        const pdfUrl = "src/assets/Multani's Resume.pdf";
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = "Multani's Resume.pdf"; // specify the filename
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
+    const handleCloseNavModal = () => {
+        setToggle('');
+    }
+
     useEffect(() => {
         if (location.pathname == '/') {
             setShowHeader(null)
@@ -33,7 +47,8 @@ function Header(props) {
             startDelay: 300,
             typeSpeed: 100,
             backSpeed: 100,
-            backDelay: 100
+            backDelay: 100,
+            loop: true
         });
 
         // Destropying
@@ -58,7 +73,7 @@ function Header(props) {
                     <h2>I'm a passionate <span ref={el}></span></h2>
 
                     <nav id="navbar" className={toggle ? 'navbar-mobile' : 'navbar'}>
-                        <ul>
+                        <ul onClick={handleCloseNavModal}>
                             <li>
                                 <NavLink
                                     className={({ isActive }) => (isActive ? 'active' : '')}
@@ -97,6 +112,10 @@ function Header(props) {
                             <i className="bi bi-linkedin"></i>
                         </a>
                     </div>
+
+                    <button className="pdfBtn" style={showHeader ? { display: "none" } : { display: "block" }} onClick={onButtonClick}>
+                        My Resume
+                    </button>
                 </div>
             </header>
         </>

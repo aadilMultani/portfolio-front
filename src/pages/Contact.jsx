@@ -1,8 +1,53 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import Swal from 'sweetalert2';
+import { addDataInApi } from '../utils/api';
 
 function Contact(props) {
 
   const [showSection, setShowSection] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleAdd = e => {
+    e.preventDefault();
+    e.target.reset();
+
+    if (!name || !email || !subject || !message) {
+      return Swal.fire({
+        icon: 'error',
+        background: 'black',
+        title: 'Error!',
+        text: 'All fields are required.',
+        showConfirmButton: true,
+        cancelButtonColor: "gray",
+        confirmButtonColor: "#00abe0",
+      });
+    }
+
+    const userFormdata = {
+      name,
+      email,
+      subject,
+      message
+    }
+
+    addDataInApi("add-contact", userFormdata).then((response) => {
+      Swal.fire({
+        icon: 'success',
+        background: 'black',
+        title: 'Added!',
+        text: `${name}'s data has been Added.`,
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    })
+    setName('');
+    setEmail('');
+    setSubject('');
+    setMessage('');
+  };
 
   useEffect(() => {
     setShowSection(props.class)
@@ -63,26 +108,46 @@ function Contact(props) {
               </div>
             </div>
 
-            <form className="php-email-form mt-4">
+            <form className="php-email-form mt-4" onSubmit={handleAdd}>
               <div className="row">
                 <div className="col-md-6 form-group">
                   <input type="text" name="name" className="form-control"
-                    id="name" placeholder="Your Name*" required />
+                    id="name" placeholder="Your Name*"
+                    value={name}
+                    onChange={e => setName(e.target.value)}
+                  />
                 </div>
+
                 <div className="col-md-6 form-group mt-3 mt-md-0">
                   <input type="email" className="form-control" name="email"
-                    id="email" placeholder="Your Email*" required />
+                    id="email" placeholder="Your Email*"
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                  />
                 </div>
               </div>
+
               <div className="form-group mt-3">
                 <input type="text" className="form-control" name="subject"
-                  id="subject" placeholder="Subject" />
+                  id="subject" placeholder="Subject"
+                  value={subject}
+                  onChange={e => setSubject(e.target.value)}
+                />
               </div>
+
               <div className="form-group mt-3">
                 <textarea className="form-control" name="message" rows="5"
-                  placeholder="Message"></textarea>
+                  placeholder="Message"
+                  value={message}
+                  onChange={e => setMessage(e.target.value)}
+                ></textarea>
               </div>
-              <div className="text-center mt-4"><button type="submit" >Send Message</button></div>
+
+              <div className="text-center mt-4"><button type="submit">
+                Send Message
+              </button>
+              </div>
+
             </form >
 
           </div >

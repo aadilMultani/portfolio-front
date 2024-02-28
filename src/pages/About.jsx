@@ -6,14 +6,15 @@ function About(props) {
     const [showSection, setShowSection] = useState('');
     const [userData, setUserData] = useState([]);
     const [skillData, setSkillData] = useState([]);
+    const mailTo = userData[0]?.detail[0]?.PhEmailone;
 
     const apiData = () => {
         fetchDataFromApi('about').then((res) => {
-            setUserData(res.data.data);
+            setUserData(res.data.About);
         })
 
         fetchDataFromApi('get-skill').then((response) => {
-            setSkillData(response.data.data)
+            setSkillData(response.data.Skill)
         })
     }
 
@@ -75,7 +76,9 @@ function About(props) {
                                         </li>
                                         <li>
                                             <i className="bi bi-chevron-right"></i>
-                                            <strong>PhEmailone:</strong> <span>{userData[0]?.detail[0]?.PhEmailone}</span>
+                                            <strong>PhEmailone:</strong> <span>
+                                                <a style={{ color: 'white' }} href={`mailto:${mailTo}`}>{mailTo}</a>
+                                            </span>
                                         </li>
                                         <li>
                                             <i className="bi bi-chevron-right"></i>

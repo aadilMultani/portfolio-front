@@ -21,7 +21,8 @@ body::before {
   content: "";
   position: fixed;
   background: #040404 url("../img/bg.jpg") top right no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
   left: 0;
   right: 0;
   top: 0;
@@ -331,6 +332,14 @@ h6 {
 
 .navbar-mobile li+li {
   margin: 0;
+}
+
+.navbar-mobile a{
+  color: #fff;
+}
+
+.navbar-mobile a:hover{
+  color: #00abe0;
 }
 
 .navbar-mobile a,
@@ -1191,4 +1200,19 @@ section .container {
 
 .credits a:hover {
   color: #fff;
+}
+
+.pdfBtn {
+  background: #00abe0;
+  border: 0;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+.pdfBtn:hover {
+  background-color: #a0e5f9;
+  color: #444444;
 }
