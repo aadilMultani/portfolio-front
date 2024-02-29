@@ -40,7 +40,7 @@ function About(props) {
 
                     <div className="row">
                         <div className="col-lg-4" data-aos="fade-right">
-                            {isLoading ? (<img src="public/img/bg.jpg" className="img-fluid" alt="" />) : (<Skeleton height={250} />)}
+                            <img src="public/img/bg.jpg" className="img-fluid" alt="" />
                         </div>
                         <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                             <h3>{userData[0]?.title || <Skeleton style={{ marginBottom: '.0.6rem' }} />} </h3>
