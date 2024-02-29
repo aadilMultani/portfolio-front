@@ -8,13 +8,11 @@ function About(props) {
     const [showSection, setShowSection] = useState('');
     const [userData, setUserData] = useState([]);
     const [skillData, setSkillData] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
     const mailTo = userData[0]?.detail[0]?.PhEmailone;
 
     const apiData = () => {
         fetchDataFromApi('about').then((res) => {
             setUserData(res.data.About);
-            setIsLoading(true);
         })
 
         fetchDataFromApi('get-skill').then((response) => {
@@ -40,7 +38,7 @@ function About(props) {
 
                     <div className="row">
                         <div className="col-lg-4" data-aos="fade-right">
-                            <img src="public/img/bg.jpg" className="img-fluid" alt="" />
+                            <img src="src/assets/img/bg.jpg" className="img-fluid" alt="" />
                         </div>
                         <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                             <h3>{userData[0]?.title || <Skeleton style={{ marginBottom: '.0.6rem' }} />} </h3>

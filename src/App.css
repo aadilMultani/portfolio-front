@@ -20,7 +20,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/bg.jpg") top right no-repeat;
+  background: #040404 url("./assets/img/bg.jpg") top right no-repeat;
   background-size: cover;
   background-position: center;
   left: 0;
@@ -1217,16 +1217,16 @@ section .container {
   color: #444444;
 }
 
-.wrapper-skeleton{
+.wrapper-skeleton {
   display: flex;
   width: 100%;
   height: 100%;
 }
 
-.wrapper-skeleton .left-col{
+.wrapper-skeleton .left-col {
   margin-right: 1rem;
 }
 
-.wrapper-skeleton .right-col{
+.wrapper-skeleton .right-col {
   flex: 1;
 }
