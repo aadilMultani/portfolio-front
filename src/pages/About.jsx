@@ -3,6 +3,7 @@ import { fetchDataFromApi } from '../utils/api';
 import CountUp from 'react-countup';
 import Skeleton from 'react-loading-skeleton';
 import CardSkeleton from '../component/CardSkeleton';
+import aboutImage from '../assets/img/bg.jpg'
 
 function About(props) {
     const [showSection, setShowSection] = useState('');
@@ -38,7 +39,7 @@ function About(props) {
 
                     <div className="row">
                         <div className="col-lg-4" data-aos="fade-right">
-                            <img src="src/assets/img/bg.jpg" className="img-fluid" alt="" />
+                            <img src={aboutImage} className="img-fluid" alt="" />
                         </div>
                         <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                             <h3>{userData[0]?.title || <Skeleton style={{ marginBottom: '.0.6rem' }} />} </h3>

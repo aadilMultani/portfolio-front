@@ -1,6 +1,7 @@
 import Typed from "typed.js";
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom';
+import resumeURL from '../assets/resume.pdf';
 
 function Header(props) {
     const navigate = useNavigate();
@@ -15,7 +16,7 @@ function Header(props) {
     };
 
     const onButtonClick = () => {
-        const pdfUrl = "src/assets/Multani's Resume.pdf";
+        const pdfUrl = resumeURL;
         const link = document.createElement("a");
         link.href = pdfUrl;
         link.download = "Multani's Resume.pdf"; // specify the filename
