@@ -56,7 +56,9 @@ function About(props) {
                                             </li>
                                             <li>
                                                 <i className="bi bi-chevron-right"></i>
-                                                <strong>Website:</strong> <span>{userData[0]?.detail[0]?.Website}</span>
+                                                <strong>Website:</strong> <span>
+                                                    <a target="_blank" style={{ color: 'white' }} href={`${userData[0]?.detail[0]?.Website}`}>{userData[0]?.detail[0]?.Website}</a>
+                                                </span>
                                             </li>
                                             <li>
                                                 <i className="bi bi-chevron-right"></i>
