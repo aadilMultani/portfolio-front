@@ -13,16 +13,12 @@ function About(props) {
 
     const apiData = () => {
         fetchDataFromApi('about').then((res) => {
-            setTimeout(() => {
-                setUserData(res.data.About);
-                setIsLoading(true);
-            }, 2000);
+            setUserData(res.data.About);
+            setIsLoading(true);
         })
 
         fetchDataFromApi('get-skill').then((response) => {
-            setTimeout(() => {
-                setSkillData(response.data.Skill)
-            }, 2000);
+            setSkillData(response.data.Skill)
         })
     }
 
