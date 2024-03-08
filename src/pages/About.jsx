@@ -113,7 +113,7 @@ function About(props) {
                         <div className="col-lg-3 col-md-6">
                             <div className="count-box">
                                 <i className="bi bi-emoji-smile"></i>
-                                <CountUp start={0} end={232} />
+                                <CountUp start={0} end={5} />
                                 <p>Happy Clients</p>
                             </div>
                         </div>
@@ -121,7 +121,7 @@ function About(props) {
                         <div className="col-lg-3 col-md-6 mt-5 mt-md-0">
                             <div className="count-box">
                                 <i className="bi bi-journal-richtext"></i>
-                                <CountUp start={0} end={521} />
+                                <CountUp start={0} end={8} />
                                 <p>Projects</p>
                             </div>
                         </div>
@@ -129,7 +129,7 @@ function About(props) {
                         <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
                             <div className="count-box">
                                 <i className="bi bi-headset"></i>
-                                <CountUp start={0} end={1463} />
+                                <CountUp start={0} end={521} />
                                 <p>Hours Of Support</p>
                             </div>
                         </div>
@@ -137,7 +137,7 @@ function About(props) {
                         <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
                             <div className="count-box">
                                 <i className="bi bi-award"></i>
-                                <CountUp start={0} end={24} />
+                                <CountUp start={0} end={3} />
                                 <p>Awards</p>
                             </div>
                         </div>

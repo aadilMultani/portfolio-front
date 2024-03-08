@@ -34,6 +34,20 @@ function Contact(props) {
     }
 
     addDataInApi("add-contact", userFormdata).then((response) => {
+
+      if (response?.response?.data?.success == false) {
+        return Swal.fire({
+          icon: 'error',
+          background: 'black',
+          title: 'Error!',
+          text: response?.response?.data?.message,
+          showConfirmButton: true,
+          cancelButtonColor: "gray",
+          confirmButtonColor: "#00abe0",
+        });
+      }
+
+      console.log("respossne", response);
       Swal.fire({
         icon: 'success',
         background: 'black',

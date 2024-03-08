@@ -71,7 +71,7 @@ function Header(props) {
                         <img src="assets/img/logo.png" alt="" className="img-fluid" />
                     </a> */}
 
-                    <h2>I'm a passionate <span ref={el}></span></h2>
+                    <h2 className="typedJS">I'm a passionate <span ref={el} ></span></h2>
 
                     <nav id="navbar" className={toggle ? 'navbar-mobile' : 'navbar'}>
                         <ul onClick={handleCloseNavModal}>

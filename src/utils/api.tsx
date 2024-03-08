@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const BASE_URL = 'https://backend-n9tp.onrender.com/api/v1/';
+// const BASE_URL = 'http://localhost:5000/api/v1/';
+// const BASE_URL = 'https://backend-n9tp.onrender.com/api/v1/';
+const BASE_URL = 'https://portfolio-backend-88n4.onrender.com/api/v1/';
 
 export const fetchDataFromApi = async (url) => {
     try {
