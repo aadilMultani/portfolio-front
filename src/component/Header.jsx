@@ -8,7 +8,6 @@ function Header(props) {
     const [showHeader, setShowHeader] = useState('');
     const [toggle, setToggle] = useState(false);
     const location = useLocation();
-
     const el = useRef(null);
 
     const handleToggle = () => {
@@ -39,6 +38,7 @@ function Header(props) {
         const typed = new Typed(el.current, {
             strings: [
                 "Mern Stack Developer",
+                "Mean Stack Developer",
                 "Web Developer",
                 "Web Designer",
                 "Frontend Developer",

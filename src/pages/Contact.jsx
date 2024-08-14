@@ -47,7 +47,6 @@ function Contact(props) {
         });
       }
 
-      console.log("respossne", response);
       Swal.fire({
         icon: 'success',
         background: 'black',
@@ -85,7 +84,7 @@ function Contact(props) {
                 <div className="info-box">
                   <i className="bx bi bi-geo-alt"></i>
                   <h3>My Address</h3>
-                  <p>Alif, Street No.2 , Nehru Nagar, Near Amrepali Fatak, Rajkot-360001</p>
+                  <p>Alif, Street No.2 , Nehru Nagar, Near Amrapali Fatak, Rajkot-360001</p>
                 </div>
               </div>
 
