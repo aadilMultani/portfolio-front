@@ -2,6 +2,7 @@ import Typed from "typed.js";
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom';
 import resumeURL from '../assets/resume.pdf';
+import { gsap } from "gsap";
 
 function Header(props) {
     const navigate = useNavigate();
@@ -37,8 +38,8 @@ function Header(props) {
 
         const typed = new Typed(el.current, {
             strings: [
-                "Mern Stack Developer",
-                "Mean Stack Developer",
+                "Mean/Mern Stack Developer",
+                // "Mean Stack Developer",
                 "Web Developer",
                 "Web Designer",
                 "Frontend Developer",
@@ -115,7 +116,8 @@ function Header(props) {
                     </div>
 
                     <button className="pdfBtn" style={showHeader ? { display: "none" } : { display: "block" }} onClick={onButtonClick}>
-                        My Resume
+                        {/* Download my CV */}
+                        DOWNLOAD CV
                     </button>
                 </div>
             </header>

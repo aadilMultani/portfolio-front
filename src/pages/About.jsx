@@ -3,12 +3,14 @@ import { fetchDataFromApi } from '../utils/api';
 import CountUp from 'react-countup';
 import Skeleton from 'react-loading-skeleton';
 import CardSkeleton from '../component/CardSkeleton';
-import aboutImage from '../assets/img/bg.jpg'
+import Skill from './skill/Skill';
+// import aboutImage from '../assets/img/bg.png';
 
 function About(props) {
     const [showSection, setShowSection] = useState('');
     const [userData, setUserData] = useState([]);
     const [skillData, setSkillData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
     const mailTo = userData[0]?.detail[0]?.PhEmailone;
 
     const apiData = () => {
@@ -24,6 +26,10 @@ function About(props) {
     useEffect(() => {
         apiData();
         setShowSection(props.class);
+
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 1000);
     }, []);
 
     return (
@@ -38,35 +44,57 @@ function About(props) {
                     </div>
 
                     <div className="row">
-                        <div className="col-lg-4" data-aos="fade-right">
-                            <img src={aboutImage} className="img-fluid" alt="" />
+                        <div className="col-lg-4 d-flex justify-content-center align-items-center" data-aos="fade-right">
+                            {/* <div className='about-img'> */}
+                                <img src={'src/assets/img/about_img_2.jpeg'} className="rounded-circle about-img" alt="" />
+                            {/* </div> */}
                         </div>
                         <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                            <h3>{userData[0]?.title || <Skeleton style={{ marginBottom: '.0.6rem' }} />} </h3>
-                            <p className="fst-italic">
-                                {userData[0]?.aboutMe || <Skeleton count={3} style={{ marginBottom: '.0.6rem' }} />}
+                            <h3>
+                                {/* {userData[0]?.title || <Skeleton style={{ marginBottom: '.0.6rem' }} />} */}
+                                MERN/MEAN STACK DEVELOPER
+                            </h3>
+                            <p>
+                                {/* {userData[0]?.aboutMe || <Skeleton count={3} style={{ marginBottom: '.0.6rem' }} />} */}
+
+                                Passionate and highly skilled Mern stack developer with 2 Year of experience in building dynamic and responsive web application. Seeking to contribute my expertise in frontend development to a forward-thinking company where I can make a meaningful impact.
                             </p>
                             <div className="row">
                                 <div className="col-lg-6">
-                                    {userData[0]?.detail.length ? (
+                                    {!isLoading ? (
                                         <ul>
                                             <li>
                                                 <i className="bi bi-chevron-right"></i>
-                                                <strong>Birthday:</strong> <span>{userData[0]?.detail[0]?.birthday}</span>
-                                            </li>
-                                            <li>
-                                                <i className="bi bi-chevron-right"></i>
-                                                <strong>Website:</strong> <span>
-                                                    <a target="_blank" style={{ color: 'white' }} href={`${userData[0]?.detail[0]?.Website}`}>{userData[0]?.detail[0]?.Website}</a>
+                                                <strong>Birthday:</strong>
+                                                <span>
+                                                    {/* {userData[0]?.detail[0]?.birthday} */}
+                                                    18 Feb 2003
                                                 </span>
                                             </li>
                                             <li>
                                                 <i className="bi bi-chevron-right"></i>
-                                                <strong>Phone:</strong> <span>{userData[0]?.detail[0]?.Phone}</span>
+                                                <strong>Website:</strong> <span>
+                                                    <a target="_blank" style={{ color: 'white' }} href={`/aadilmultani.netlify.app`}>
+                                                        {/* {userData[0]?.detail[0]?.Website} */}
+                                                        aadilmultani.netlify.app
+                                                    </a>
+                                                </span>
                                             </li>
                                             <li>
                                                 <i className="bi bi-chevron-right"></i>
-                                                <strong>City:</strong> <span>{userData[0]?.detail[0]?.City}</span>
+                                                <strong>Phone:</strong>
+                                                <span>
+                                                    {/* {userData[0]?.detail[0]?.Phone} */}
+                                                    9662896738
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <i className="bi bi-chevron-right"></i>
+                                                <strong>City:</strong>
+                                                <span>
+                                                    {/* {userData[0]?.detail[0]?.City} */}
+                                                    Rajkot, India
+                                                </span>
                                             </li>
                                         </ul>
                                     ) : (
@@ -74,25 +102,40 @@ function About(props) {
                                     )}
                                 </div>
                                 <div className="col-lg-6">
-                                    {userData[0]?.detail.length ? (
+                                    {!isLoading ? (
                                         <ul>
                                             <li>
                                                 <i className="bi bi-chevron-right"></i>
-                                                <strong>Age:</strong> <span>{userData[0]?.detail[0]?.Age}</span>
-                                            </li>
-                                            <li>
-                                                <i className="bi bi-chevron-right"></i>
-                                                <strong>Degree:</strong> <span>{userData[0]?.detail[0]?.Degree}</span>
-                                            </li>
-                                            <li>
-                                                <i className="bi bi-chevron-right"></i>
-                                                <strong>PhEmailone:</strong> <span>
-                                                    <a style={{ color: 'white' }} href={`mailto:${mailTo}`}>{mailTo}</a>
+                                                <strong>Age:</strong>
+                                                <span>
+                                                    {/* {userData[0]?.detail[0]?.Age} */}
+                                                    21
                                                 </span>
                                             </li>
                                             <li>
                                                 <i className="bi bi-chevron-right"></i>
-                                                <strong>Freelance:</strong> <span>{userData[0]?.detail[0]?.Freelance}</span>
+                                                <strong>Degree:</strong>
+                                                <span>
+                                                    {/* {userData[0]?.detail[0]?.Degree} */}
+                                                    Bachelor of Computer Application
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <i className="bi bi-chevron-right"></i>
+                                                <strong>PhEmailone:</strong> <span>
+                                                    <a style={{ color: 'white' }} href={`mailto:aadilmultani646@gmail.com`}>
+                                                        {/* {mailTo} */}
+                                                        aadilmultani646@gmail.com
+                                                    </a>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <i className="bi bi-chevron-right"></i>
+                                                <strong>Freelance:</strong>
+                                                <span>
+                                                    {/* {userData[0]?.detail[0]?.Freelance} */}
+                                                    Available
+                                                </span>
                                             </li>
                                         </ul>
                                     ) : (
@@ -148,7 +191,10 @@ function About(props) {
                 {/* End Counts */}
 
                 {/* Skills  */}
-                <div className="skills container">
+
+                <Skill />
+
+                {/* <div className="skills container">
 
                     <div className="section-title">
                         <h2>Skills</h2>
@@ -156,24 +202,51 @@ function About(props) {
 
                     <div className="row skills-content">
 
-                        {skillData.length ? (
+                        {!isLoading ? (
                             <>
                                 {skillData && skillData.map((item) => (
-                                    <div key={item._id} className="col-lg-6">
-                                        <div className="progress">
-                                            <span className="skill">{item.skillName} <i className="val">{item.expertise}%</i></span>
-                                            <div className="progress-bar-wrap">
-                                                <div className="progress-bar" role="progressbar" style={{ width: `${item.expertise}%` }}></div>
+                                    <>
+                                        <div className="col-lg-6">
+                                            <div className="progress">
+                                                <span className="skill">HTML <i className="val">90%</i></span>
+                                                <div className="progress-bar-wrap">
+                                                    <div className="progress-bar" role="progressbar" style={{ width: `90%` }}></div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                        <div className="col-lg-6">
+                                            <div className="progress">
+                                                <span className="skill">CSS <i className="val">95%</i></span>
+                                                <div className="progress-bar-wrap">
+                                                    <div className="progress-bar" role="progressbar" style={{ width: `95%` }}></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-6">
+                                            <div className="progress">
+                                                <span className="skill">JS <i className="val">85%</i></span>
+                                                <div className="progress-bar-wrap">
+                                                    <div className="progress-bar" role="progressbar" style={{ width: `85%` }}></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-6">
+                                            <div className="progress">
+                                                <span className="skill">JS <i className="val">85%</i></span>
+                                                <div className="progress-bar-wrap">
+                                                    <div className="progress-bar" role="progressbar" style={{ width: `85%` }}></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </>
+
                                 ))}
                             </>
                         ) : (
                             <CardSkeleton />
                         )}
                     </div>
-                </div>
+                </div> */}
                 {/* End Skills  */}
 
             </section>

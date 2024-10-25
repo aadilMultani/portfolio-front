@@ -26,11 +26,11 @@ function Resume(props) {
                                 <div className="resume-item pb-0">
                                     <h4>Aadil Multani</h4>
                                     <p>
-                                        <em>As a MERN stack developer, I'm skilled in JavaScript for dynamic interfaces and have built
-                                            user-friendly web apps with React. js and Angular. I create scalable server-side
-                                            applications using
-                                            Node. js and design efficient MongoDB databases.
-                                        </em>
+                                        As a MERN stack developer, I'm skilled in JavaScript for dynamic interfaces and have built
+                                        user-friendly web apps with React. js and Angular. I create scalable server-side
+                                        applications using
+                                        Node. js and design efficient MongoDB databases.
+
                                     </p>
                                     <ul>
                                         <li>Rajkot, India</li>
@@ -43,14 +43,14 @@ function Resume(props) {
                                 <div className="resume-item">
                                     <h4>Bachelor Of Computer Application</h4>
                                     <h5>2021 - Present</h5>
-                                    <p><em>Saurashtra University Rajkot, Gujarat, INDIA.</em></p>
+                                    <p>Saurashtra University Rajkot, Gujarat, INDIA.</p>
                                     <p>Saurashtra University is a public university in Rajkot, Gujarat, India. It was established on May
                                         23, 1967, and its campus covers 410 acres.</p>
                                 </div>
                                 <div className="resume-item">
                                     <h4>Higher Secondry</h4>
                                     <h5>2018 - 2019</h5>
-                                    <p><em>Dream Internationals School Rajkot, Gujarat, INDIA.</em></p>
+                                    <p>Dream Internationals School Rajkot, Gujarat, INDIA.</p>
                                     <p>The Dream International School believes that people learn best in atmosphere of respect and
                                         caring. classNamees must be vibrant learning centres where the young fertile minds are secure and
                                         free to explore the limits of their unlimited potential.</p>
@@ -61,7 +61,7 @@ function Resume(props) {
                                 <div className="resume-item">
                                     <h4>mern stack developer</h4>
                                     <h5>2022 - Present</h5>
-                                    <p><em>Nrn Infotech, Rajkot Gujarat, INDIA </em></p>
+                                    <p>Nrn Infotech, Rajkot Gujarat, INDIA </p>
                                     <ul>
                                         <li>Developed and maintained web application using Angular CLI.</li>
                                         <li>Developed and maintained web application using ionic Angular framework.</li>
