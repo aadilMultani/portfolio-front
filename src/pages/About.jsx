@@ -46,7 +46,7 @@ function About(props) {
                     <div className="row">
                         <div className="col-lg-4 d-flex justify-content-center align-items-center" data-aos="fade-right">
                             {/* <div className='about-img'> */}
-                                <img src={'src/assets/img/about_img_2.jpeg'} className="rounded-circle about-img" alt="" />
+                                <img src={'assets/img/about_img_2.jpeg'} className="rounded-circle about-img" alt="" />
                             {/* </div> */}
                         </div>
                         <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
