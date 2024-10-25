@@ -4,7 +4,7 @@ import CountUp from 'react-countup';
 import Skeleton from 'react-loading-skeleton';
 import CardSkeleton from '../component/CardSkeleton';
 import Skill from './skill/Skill';
-// import aboutImage from '../assets/img/bg.png';
+import aboutImage from '../assets/img/about_img_2.jpeg';
 
 function About(props) {
     const [showSection, setShowSection] = useState('');
@@ -45,9 +45,7 @@ function About(props) {
 
                     <div className="row">
                         <div className="col-lg-4 d-flex justify-content-center align-items-center" data-aos="fade-right">
-                            {/* <div className='about-img'> */}
-                                <img src={'assets/img/about_img_2.jpeg'} className="rounded-circle about-img" alt="" />
-                            {/* </div> */}
+                            <img src={aboutImage} className="rounded-circle about-img" alt="" />
                         </div>
                         <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                             <h3>
@@ -56,7 +54,6 @@ function About(props) {
                             </h3>
                             <p>
                                 {/* {userData[0]?.aboutMe || <Skeleton count={3} style={{ marginBottom: '.0.6rem' }} />} */}
-
                                 Passionate and highly skilled Mern stack developer with 2 Year of experience in building dynamic and responsive web application. Seeking to contribute my expertise in frontend development to a forward-thinking company where I can make a meaningful impact.
                             </p>
                             <div className="row">
@@ -74,7 +71,7 @@ function About(props) {
                                             <li>
                                                 <i className="bi bi-chevron-right"></i>
                                                 <strong>Website:</strong> <span>
-                                                    <a target="_blank" style={{ color: 'white' }} href={`/aadilmultani.netlify.app`}>
+                                                    <a target="_blank" style={{ color: 'white' }} href={`aadilmultani.netlify.app`}>
                                                         {/* {userData[0]?.detail[0]?.Website} */}
                                                         aadilmultani.netlify.app
                                                     </a>
@@ -191,63 +188,7 @@ function About(props) {
                 {/* End Counts */}
 
                 {/* Skills  */}
-
                 <Skill />
-
-                {/* <div className="skills container">
-
-                    <div className="section-title">
-                        <h2>Skills</h2>
-                    </div>
-
-                    <div className="row skills-content">
-
-                        {!isLoading ? (
-                            <>
-                                {skillData && skillData.map((item) => (
-                                    <>
-                                        <div className="col-lg-6">
-                                            <div className="progress">
-                                                <span className="skill">HTML <i className="val">90%</i></span>
-                                                <div className="progress-bar-wrap">
-                                                    <div className="progress-bar" role="progressbar" style={{ width: `90%` }}></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6">
-                                            <div className="progress">
-                                                <span className="skill">CSS <i className="val">95%</i></span>
-                                                <div className="progress-bar-wrap">
-                                                    <div className="progress-bar" role="progressbar" style={{ width: `95%` }}></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6">
-                                            <div className="progress">
-                                                <span className="skill">JS <i className="val">85%</i></span>
-                                                <div className="progress-bar-wrap">
-                                                    <div className="progress-bar" role="progressbar" style={{ width: `85%` }}></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6">
-                                            <div className="progress">
-                                                <span className="skill">JS <i className="val">85%</i></span>
-                                                <div className="progress-bar-wrap">
-                                                    <div className="progress-bar" role="progressbar" style={{ width: `85%` }}></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </>
-
-                                ))}
-                            </>
-                        ) : (
-                            <CardSkeleton />
-                        )}
-                    </div>
-                </div> */}
-                {/* End Skills  */}
 
             </section>
             {/* End About Section */}

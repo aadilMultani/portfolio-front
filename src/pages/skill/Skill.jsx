@@ -1,6 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import './style.css';
+import AngularImg from '../../assets/img/Angular-png.png';
+import ReactImg from '../../assets/img/reactjs-logo-removebg-preview.png';
+import Nodejs from '../../assets/img/nodejs-logo-removebg-preview.png';
+import JavaScript from '../../assets/img/JavaScript-logo.png';
+import ExpressJs from '../../assets/img/expressJs-logo-removebg-preview.png';
+import Mongodb from '../../assets/img/mongoDB-logo-removebg-preview.png';
+import Nextjs from '../../assets/img/nextjs-removebg-preview.png';
 
 const Skill = () => {
     const skillRef = useRef(null);
@@ -11,7 +18,7 @@ const Skill = () => {
         const initialAnimation = () => {
             gsap.fromTo(".hex-wrap,.hover-notify", { scale: 0 }, { scale: 1, stagger: 0.15 });
             gsap.fromTo(".hex-wrap", { opacity: 0 }, { opacity: 1, duration: 1 });
-            gsap.to(".hoverblock", { opacity: 0, delay: 3, duration: 0 });
+            // gsap.to(".hoverblock", { opacity: 0, delay: 3, duration: 0 });
         };
 
         // Function to handle animations when the section is in view
@@ -78,7 +85,7 @@ const Skill = () => {
                                                 <div className="border-3"></div>
                                             </div>
                                             <div className="label">
-                                                <img src="src/assets/img/Angular-png.png" />
+                                                <img src={AngularImg} />
                                             </div>
                                             <div className="hexagon">
                                                 <div className="hex-inner-1">
@@ -95,7 +102,9 @@ const Skill = () => {
                                                 <div className="border-2"></div>
                                                 <div className="border-3"></div>
                                             </div>
-                                            <div className="label"><img src="src/assets/img/reactjs-logo-removebg-preview.png" /></div>
+                                            <div className="label">
+                                                <img src={ReactImg} />
+                                            </div>
                                             <div className="hexagon">
                                                 <div className="hex-inner-1">
                                                     <div className="hex-inner-2"></div>
@@ -113,7 +122,9 @@ const Skill = () => {
                                                 <div className="border-2"></div>
                                                 <div className="border-3"></div>
                                             </div>
-                                            <div className="label"><img src="src/assets/img/nodejs-logo-removebg-preview.png" /></div>
+                                            <div className="label">
+                                                <img src={Nodejs} />
+                                            </div>
                                             <div className="hexagon">
                                                 <div className="hex-inner-1">
                                                     <div className="hex-inner-2"></div>
@@ -128,7 +139,9 @@ const Skill = () => {
                                                 <div className="border-2"></div>
                                                 <div className="border-3"></div>
                                             </div>
-                                            <div className="label"><img src="src/assets/img/JavaScript-logo.png" /></div>
+                                            <div className="label">
+                                                <img src={JavaScript} />
+                                            </div>
                                             <div className="hexagon">
                                                 <div className="hex-inner-1">
                                                     <div className="hex-inner-2"></div>
@@ -143,7 +156,9 @@ const Skill = () => {
                                                 <div className="border-2"></div>
                                                 <div className="border-3"></div>
                                             </div>
-                                            <div className="label"><img src="src/assets/img/expressJs-logo-removebg-preview.png" /></div>
+                                            <div className="label">
+                                                <img src={ExpressJs} />
+                                            </div>
                                             <div className="hexagon">
                                                 <div className="hex-inner-1">
                                                     <div className="hex-inner-2"></div>
@@ -160,7 +175,9 @@ const Skill = () => {
                                                 <div className="border-2"></div>
                                                 <div className="border-3"></div>
                                             </div>
-                                            <div className="label"><img src="src/assets/img/mongoDB-logo-removebg-preview.png" /></div>
+                                            <div className="label">
+                                                <img src={Mongodb} />
+                                            </div>
                                             <div className="hexagon">
                                                 <div className="hex-inner-1">
                                                     <div className="hex-inner-2"></div>
@@ -175,7 +192,9 @@ const Skill = () => {
                                                 <div className="border-2"></div>
                                                 <div className="border-3"></div>
                                             </div>
-                                            <div className="label"><img src="src/assets/img/nextjs-removebg-preview.png" /></div>
+                                            <div className="label">
+                                                <img src={Nextjs} />
+                                            </div>
                                             <div className="hexagon">
                                                 <div className="hex-inner-1">
                                                     <div className="hex-inner-2"></div>
